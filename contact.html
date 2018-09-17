@@ -134,7 +134,12 @@
                     </div>
                     <div id="formSubmitResult" hidden="true">
                         <p id="resultText"></p>
+                    </div>
+                    <div id="formSuccessComment" hidden="true">
                         <p>You will be contacted soon.</p>
+                    </div>
+                    <div id="formErrorComment" hidden="true">
+                        <p>Error happened during submission contact request.</p>
                     </div>
                 </div>
             </div>
@@ -201,10 +206,12 @@
 
                 .done(function (msg) {
                     $("#resultText").text(msg);
+                    $("#formSuccessComment").show();                    
                 })
 
                 .fail(function (xhr, exception) {
                     $("#resultText").text("error:" + exception);
+                    $("#formErrorComment").show();
                 })
 
                 .always(function () {
