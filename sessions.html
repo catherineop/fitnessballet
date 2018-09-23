@@ -13,11 +13,13 @@
 
     <!-- Google Analytics -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
         ga('create', 'UA-11108523-1', 'auto');
         ga('send', 'pageview');
     </script>
@@ -103,22 +105,35 @@
                 </div>
                 <div class="col-lg-12 text-center">
                     <h5>Sessions</h5>
-                    <p>Training sessions are 45 minutes. Sessions are conducted over Skype.</p>
+                    <p>Training sessions are 45 or 30 minutes. Sessions are conducted over Skype.</p>
                     <hr>
                     <h5>Schedule</h5>
-                    <p>Sessions are available Monday - Friday.</p>
-                    <hr>
-                    <h5>Costs</h5>
-                    <p>Starting 25 USD per 45 min.</p>
+                    <p>Sessions are available Monday - Thursday.</p>
                     <hr>
                     <h5>Payments</h5>
                     <p>All payments should be received up to 2 hours before the session starts.</p>
                     <hr>
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="DQ8WYMCYYGFTG">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        <input type="hidden" name="hosted_button_id" value="VN8A8LDXTRPSW">
+                        <table class="table">
+                            <tr>
+                                <td><input type="hidden" name="on0" value="Online Training Session">
+                                    <p>Online Training Session:</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><select name="os0">
+                                        <option value="45 min">45 min - $35.00 CAD</option>
+                                        <option value="30 min">30 min - $25.00 CAD</option>
+                                    </select> </td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="currency_code" value="CAD">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"
+                            name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+                            height="1">
                     </form>
                     <hr>
                 </div>
