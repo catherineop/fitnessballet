@@ -185,3 +185,11 @@ footer p {
         clear: both;
     }
 }
+
+video::-webkit-media-controls-download-button {
+    display: none;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
