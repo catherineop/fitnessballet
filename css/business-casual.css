@@ -189,3 +189,7 @@ footer p {
 video::-webkit-media-controls-fullscreen-button {
     display: none;
 }
+
+.sizer360p {
+    width: 640px;
+}
