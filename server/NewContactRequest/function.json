@@ -1,0 +1,34 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "post"
+      ],
+      "webHookType": "genericJson"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "ContactRequests",
+      "connection": "fitnessballetstorage_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "sendGrid",
+      "name": "emailMessage",
+      "apiKey": "SendGridApiKey",
+      "to": "okonov.d@gmail.com",
+      "from": "contact.request@fitnessballet.com",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

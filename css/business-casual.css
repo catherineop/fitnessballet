@@ -190,6 +190,6 @@ video::-webkit-media-controls-fullscreen-button {
     display: none;
 }
 
-.sizer360p {
-    width: 640px;
+.centered{
+    margin: 0 auto;
 }
