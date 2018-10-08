@@ -26,6 +26,12 @@ p {
     color: #000;
 }
 
+ul.body-text li {
+    font-size: 1.12em;
+    line-height: 1.3;
+    color: #000;
+}
+
 hr {
     max-width: 400px;
     border-color: #999999;
