@@ -13,11 +13,13 @@
 
     <!-- Google Analytics -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
         ga('create', 'UA-11108523-1', 'auto');
         ga('send', 'pageview');
     </script>
@@ -97,19 +99,103 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">
-                        <strong>Questionnaire and Liability</strong>
+                        <strong>Questionnaire</strong> and <strong>Liability</strong>
                     </h2>
                     <hr>
+                </div>
 
-                    <p>PAR-Q - please select YES or NO to the following:</p>
+                <div class="col-lg-12 text-center">
+                    <h5>PAR-Q - please select 'YES' or 'NO' to the following:</h5>
+                </div>
 
-                    <p>Has your doctor ever said that you should only do physical activities recommended by a doctor?</p>
-                    <p>Has your docor ever said that you have a heart condition?</p>
-                    <p>Do you take medications on a regular basis?</p>
-                    <p>Is your doctor currently prescribing drugs for your blood pressure or heard condition?</p>
-                    <p>Do you lose balance due to dizziness or do you ever lose consciousness?</p>
-                    <p>Do you have a bone or jint problem?</p>
+                <div class="col-lg-12">
+                    <p>
+                        <label class="radio-inline"><input type="radio" name="limitedActivity">Y</label>
+                        <label class="radio-inline"><input type="radio" name="limitedActivity">
+                            N : Has your doctor ever said that you should only do physical activities recommended by a
+                            doctor?
+                        </label>
+                    </p>
 
+                    <p>
+                        <label class="radio-inline"><input type="radio" name="heartCondition">Y</label>
+                        <label class="radio-inline"><input type="radio" name="heartCondition">
+                            N : Has your docor ever said that you have a heart conditions?
+                        </label>
+                    </p>
+
+                    <p>
+                        <label class="radio-inline"><input type="radio" name="regularMedication">Y</label>
+                        <label class="radio-inline"><input type="radio" name="regularMedication">
+                            N : Do you take medications on a regular basis?
+                        </label>
+                    </p>
+
+                    <p>
+                        <label class="radio-inline"><input type="radio" name="heartDrugs">Y</label>
+                        <label class="radio-inline"><input type="radio" name="heartDrugs">
+                            N : Is your doctor currently prescribing drugs for your blood pressure or heart condition?
+                        </label>
+                    </p>
+
+                    <p>
+                        <label class="radio-inline"><input type="radio" name="loseConsc">Y</label>
+                        <label class="radio-inline"><input type="radio" name="loseConsc">
+                            N : Do you lose balance due to dizziness or do you ever lose consciousness?
+                        </label>
+                    </p>
+
+                    <p>
+                        <label class="radio-inline"><input type="radio" name="jointProblem">Y</label>
+                        <label class="radio-inline"><input type="radio" name="jointProblem">
+                            N : Do you have a bone or joint problem?
+                        </label>
+                    </p>
+                </div>
+
+                <hr>
+
+                <div class="col-lg-12 text-center">
+                    <h5>Liability Waiver:</h5>
+                </div>
+
+                <div class="col-lg-12">
+                    <p>I hereby affirm that I am in good physical condition and do not suffer from any disability that
+                        would prevent or limit my participation in this excercise program. I understand the result of
+                        any fitness program cannot be guaranteed and my progress depends on my effort and cooperation
+                        in and outside of the sessions. I fully understand that I may injure myself as a result of my
+                        participation in FitnessBallet exercise program and I hereby release FitnessBallet from any
+                        liability.
+                    </p>
+                </div>
+
+                <hr>
+                <div class="col-lg-12">
+                    <div id="parqForm" role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <label>Name</label>
+                                <input id="name" type="text" class="form-control" name="name" placeholder="required field">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label>Date</label>
+                                <input id="date" type="date" class="form-control" name="date" placeholder="required field">
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-lg-12">
+                                <button id="submitButton" class="btn btn-default" disabled>Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="formSubmitResult" hidden="true">
+                        <p id="resultText"></p>
+                    </div>
+                    <div id="formSuccessComment" hidden="true">
+                        <p>The Questionnaire submitted successfully.</p>
+                    </div>
+                    <div id="formErrorComment" hidden="true">
+                        <p>Error happened during submission the Questionnaire.</p>
+                    </div>
                 </div>
             </div>
         </div>
